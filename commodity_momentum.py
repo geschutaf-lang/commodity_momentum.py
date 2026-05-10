@@ -13,17 +13,18 @@ st.set_page_config(
     layout="wide"
 )
 
-# ── CSS 디자인 ────────────────────────────────────────────────
+# ── CSS 디자인 (다크모드 흰눈 현상 방지 패치) ─────────────────────────────────
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap');
 html, body, [class*="css"] { font-family: 'IBM Plex Sans', sans-serif; }
 .title-block { border-left: 4px solid #f59e0b; padding: 0.4rem 1rem; margin-bottom: 1.5rem; }
-.title-block h1 { font-size: 1.6rem; font-weight: 600; margin: 0; color: #78350f; }
-.metric-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 1rem; text-align: center; }
-.winner-card { background: #fdf4ff; border: 2px solid #d946ef; border-radius: 12px; padding: 1.5rem; margin: 1rem 0; }
-.winner-card .ticker { font-size: 2.5rem; font-weight: 600; color: #86198f; font-family: 'IBM Plex Mono', monospace; }
-.tag-pass { background: #dcfce7; color: #15803d; padding: 2px 10px; border-radius: 99px; font-size: 0.8rem; font-weight: 600; }
+.title-block h1 { font-size: 1.6rem; font-weight: 600; margin: 0; color: #78350f !important; }
+.metric-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 1rem; text-align: center; color: #1c1917 !important; }
+.winner-card { background: #fdf4ff; border: 2px solid #d946ef; border-radius: 12px; padding: 1.5rem; margin: 1rem 0; color: #1c1917 !important; }
+.winner-card .ticker { font-size: 2.5rem; font-weight: 600; color: #86198f !important; font-family: 'IBM Plex Mono', monospace; }
+.winner-card .name { color: #4a044e !important; }
+.tag-pass { background: #dcfce7; color: #15803d !important; padding: 2px 10px; border-radius: 99px; font-size: 0.8rem; font-weight: 600; }
 </style>
 """, unsafe_allow_html=True)
 
